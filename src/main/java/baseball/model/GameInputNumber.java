@@ -4,21 +4,21 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GameNumber {
+public class GameInputNumber {
 
-    private List<Integer> gameNumberList;
+    private List<Integer> inputNumberList;
 
-    public GameNumber() {
+    public GameInputNumber() {
 
     }
 
     public Integer getGameNumberByIndex(int index) {
-        return gameNumberList.get(index);
+        return inputNumberList.get(index);
     }
 
-    public void setGameNumberList(String input) {
+    public void setInputNumberList(String input) {
         System.out.println(input);
-        gameNumberList = Arrays.stream(input.split(""))
+        inputNumberList = Arrays.stream(input.split(""))
             .map(Integer::parseInt)
             .collect(Collectors.toList());
     }
