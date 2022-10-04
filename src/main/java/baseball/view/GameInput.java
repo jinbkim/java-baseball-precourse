@@ -5,29 +5,32 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class GameInput {
 
-    private static final String INPUT_NUMBER = "숫자를 입력해주세요 : ";
+    private static final String REQUEST_NUMBER = "숫자를 입력해주세요 : ";
+    private static final String REQUEST_REGAME = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
     private static final InputValidator inputValidator = new InputValidator();
-
-    private String input;
 
     public GameInput() {
 
     }
 
-    public String getInput() {
+    public String requestNumber() {
+        System.out.print(REQUEST_NUMBER);
+        String input = Console.readLine();
+        if (!inputValidator.isValidNumberRequest(input)) {
+            throw new IllegalArgumentException();
+        }
         return input;
     }
 
-    public void setInput(String input) {
-        this.input = input;
-    }
-
-    public void setInput() {
-        System.out.print(INPUT_NUMBER);
+    public boolean requestRegame() {
+        System.out.println(REQUEST_REGAME);
         String input = Console.readLine();
-        if (!inputValidator.isValidInput(input)) {
+        if (!inputValidator.isValidRegameRequest(input)) {
             throw new IllegalArgumentException();
         }
-        setInput(input);
+        if (input.equals("1")) {
+            return true;
+        }
+        return false;
     }
 }

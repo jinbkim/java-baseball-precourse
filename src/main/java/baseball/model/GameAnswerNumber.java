@@ -8,11 +8,11 @@ public class GameAnswerNumber {
 
     private static final int MIN_NUMBER = 1;
     private static final int MAX_NUMBER = 9;
+    private static final int NUMBER_OF_BALLS = 3;
 
     private List<Integer> answerNumberList;
 
     public GameAnswerNumber() {
-        setAnswerNumberList();
     }
 
     public List<Integer> getAnswerNumberList() {
@@ -21,7 +21,7 @@ public class GameAnswerNumber {
 
     public void setAnswerNumberList() {
         answerNumberList = new ArrayList<>();
-        while (answerNumberList.size() < 3) {
+        while (answerNumberList.size() < NUMBER_OF_BALLS) {
             Integer randomNumber = getRandomNumber();
             if (answerNumberList.contains(randomNumber)) {
                 continue;
@@ -33,6 +33,4 @@ public class GameAnswerNumber {
     private int getRandomNumber() {
         return Randoms.pickNumberInRange(MIN_NUMBER, MAX_NUMBER);
     }
-
-
 }

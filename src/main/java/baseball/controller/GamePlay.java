@@ -8,19 +8,29 @@ import baseball.view.GameInput;
 public class GamePlay {
 
     private static final GameInput gameInput = new GameInput();
-    private boolean isGameOver = false;
+    private static final GameInputNumber gameInputNumber = new GameInputNumber();
+    private static final GameAnswerNumber gameAnswerNumber = new GameAnswerNumber();
+    private static final GameResult gameResult = new GameResult();
 
     public void start() {
-        GameInputNumber gameInputNumber = new GameInputNumber();
-        GameAnswerNumber gameAnswerNumber = new GameAnswerNumber();
+        while (gameResult.isRegame()) {
+            play();
+        }
+    }
+
+    private void play() {
+        gameAnswerNumber.setAnswerNumberList();
         System.out.println(gameAnswerNumber.getAnswerNumberList());
 
-        while (!isGameOver) {
-            gameInput.setInput();
-            gameInputNumber.setInputNumberList(gameInput.getInput());
-            GameResult gameResult = new GameResult(gameInputNumber, gameAnswerNumber);
-            System.out.println(gameResult.getGameResult());
-            return;
+        while (true) {
+            String input = gameInput.requestNumber();
+            gameInputNumber.setInputNumberList(input);
+            gameResult.setGameResult(gameInputNumber, gameAnswerNumber);
+            System.out.println(gameResult.getGameResult() + "\n");
+            if (gameResult.isGameWin()) {
+                gameResult.setRegame(gameInput.requestRegame());
+                break;
+            }
         }
     }
 }
