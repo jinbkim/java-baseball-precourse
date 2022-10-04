@@ -13,8 +13,8 @@ public class GameInputNumber {
 
     }
 
-    public Integer getGameNumberByIndex(int index) {
-        return inputNumberList.get(index);
+    public List<Integer> getInputNumberList() {
+        return inputNumberList;
     }
 
     public void setInputNumberList(String input) {

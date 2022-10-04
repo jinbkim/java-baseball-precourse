@@ -1,10 +1,8 @@
 package baseball.model;
 
 import camp.nextstep.edu.missionutils.Randoms;
-import java.util.HashSet;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
-import java.util.stream.Collectors;
 
 public class GameAnswerNumber {
 
@@ -17,19 +15,19 @@ public class GameAnswerNumber {
         setAnswerNumberList();
     }
 
-    public Integer getAnswerNumberByIndex(int index) {
-        return answerNumberList.get(index);
+    public List<Integer> getAnswerNumberList() {
+        return answerNumberList;
     }
 
     public void setAnswerNumberList() {
-        Set<Integer> answerNumberSet = new HashSet<>();
-
-        while (answerNumberSet.size() < 3) {
-            answerNumberSet.add(getRandomNumber());
+        answerNumberList = new ArrayList<>();
+        while (answerNumberList.size() < 3) {
+            Integer randomNumber = getRandomNumber();
+            if (answerNumberList.contains(randomNumber)) {
+                continue;
+            }
+            answerNumberList.add(randomNumber);
         }
-
-        answerNumberList = answerNumberSet.stream()
-            .collect(Collectors.toList());
     }
 
     private int getRandomNumber() {
