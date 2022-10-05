@@ -6,6 +6,7 @@ import java.util.regex.Pattern;
 public class InputValidator {
 
     private static final String REQUEST_NUMBER_REGEX = "^[1-9]{3}$";
+    private static final String REQUEST_REGAME = "^[1-2]{1}$";
     private static final int NUMBER_LENGTH = 3;
 
 
@@ -20,5 +21,9 @@ public class InputValidator {
         return Arrays.stream(input.split(""))
             .distinct()
             .count() == NUMBER_LENGTH;
+    }
+
+    public boolean isValidRequestRegame(String input) {
+        return Pattern.matches(REQUEST_REGAME, input);
     }
 }

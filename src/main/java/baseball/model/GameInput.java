@@ -16,7 +16,7 @@ public class GameInput {
     }
 
     public void setNumbers(String input) {
-        List<Integer> numbers = Arrays.stream(input.split(""))
+        numbers = Arrays.stream(input.split(""))
             .map(Integer::parseInt)
             .collect(Collectors.toList());
     }
