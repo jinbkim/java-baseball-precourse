@@ -1,6 +1,6 @@
 ## 기능 요구사항
 
-- [] 정답인 랜덤숫자 생성 하기
+- [x] 정답인 랜덤숫자 생성 하기
 - [x] 정상적인 숫자 야구 입력 받기
 - [x] 비정상적인 숫자 야구 입력 받기
   - [x] 3자리 인지
@@ -16,11 +16,11 @@
 ## 프로그래밍 요구사항
 
 - [x] java 8 버전
-- [ ] https://naver.github.io/hackday-conventions-java를 참고하여 자바 코드 컨벤션 지키기
+- [x] https://naver.github.io/hackday-conventions-java를 참고하여 자바 코드 컨벤션 지키기
 - [ ] 들여쓰기 깊이는 최대 2
 - [ ] 3항 연산자 쓰지 않기
 - [ ] 함수는 한가지 일만 하도록 구현하기
-- [ ] camp.nextstep.edu.missionutils에서 제공하는 Randoms, Console API 사용하기
+- [x] camp.nextstep.edu.missionutils에서 제공하는 Randoms, Console API 사용하기
 - [ ] src/test/java/ApplicationTest의 모든 테스트 성공하기
 
 ## 과제 진행 요구사항

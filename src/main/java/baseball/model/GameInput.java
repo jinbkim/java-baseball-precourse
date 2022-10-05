@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class GameInput {
 
-    List<Integer> numbers;
+    private List<Integer> numbers;
 
     public GameInput() {
     }
