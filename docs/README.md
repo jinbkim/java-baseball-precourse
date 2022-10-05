@@ -15,7 +15,7 @@
 
 ## 프로그래밍 요구사항
 
-- [ ] java 8 버전
+- [x] java 8 버전
 - [ ] 자바 코드 컨벤션 지키기
 - [ ] 들여쓰기 깊이는 최대 2
 - [ ] 3항 연산자 쓰지 않기
@@ -24,6 +24,7 @@
 - [ ] src/test/java/ApplicationTest의 모든 테스트 성공하기
 
 ## 과제 진행 요구사항
+
 - [ ] https://github.com/woowacourse/java-baseball-precours 에서 클론
 - [ ] java-baseball-precourse/README.md 파일에 구현할 기능 목록 정리하기
 - [ ] https://gist.github.com/stephenparish/9941e89d80e2bc58a153 참고하여 커밋메시지 남기기
