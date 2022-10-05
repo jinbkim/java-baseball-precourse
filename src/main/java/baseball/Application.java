@@ -1,6 +1,6 @@
 package baseball;
 
-import baseball.model.GameMachine;
+import baseball.controller.GameMachine;
 
 public class Application {
 

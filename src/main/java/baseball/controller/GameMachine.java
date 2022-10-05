@@ -1,5 +1,8 @@
-package baseball.model;
+package baseball.controller;
 
+import baseball.model.GameAnswer;
+import baseball.model.GameInput;
+import baseball.model.GameResult;
 import baseball.view.GameInputString;
 import baseball.view.GameOutputString;
 
