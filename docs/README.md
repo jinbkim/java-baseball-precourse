@@ -17,8 +17,9 @@
 
 ## 2. 제출 전 체크
 
-- [ ] 자바 8버전 확인
-- [ ] 모든 테스트가 통과하는지 확인 (./gradlew clean test)
+- [x] 자바 8버전 확인
+- [x] 모든 테스트가 통과하는지 확인 (./gradlew clean test)
+- [x] 요구사항 확인
 
 ## 3. 학습한 내용
 
@@ -55,12 +56,22 @@
 - contains(obj) : obj가 리스트 안에 있으면 true, 아니면 false 반환
 - indexOf(obj) : obj가 리스트 안에 있으면 해당 객체가 첫번째로 나타는 인덱스 값을 반환, 없으면 -1 반환
 
-## Enum 클래스
+### Enum 클래스
 
 - 자바에서는 enum 키워드를 사용하여 열거체를 정의할 수 있음
 
-## StringBuilder
+### StringBuilder
 
 - String과 다르게 변경 가능한 문자열 생성
 - append(str) : 문자열에 str을 합침
 - toString() : StringBuilder가 가진 문자열 반환
+
+### gradlew (gradle wrapper)
+- java나 gradle을 설치 하지 않고 바로 빌드할 수 있게 해줌
+- gradlew 파일은 쉘 스크립트
+- gradle build : 테스트 -> 컴파일 -> .jar 파일 생성
+- gradle clean : build 디렉토리를 삭제하고 빌드 전 상태로 되돌림
+- gradle test : 단위 테스트 실행
+
+## 일급 컬렉션
+- 컬렉션을 포함한 클래스는 반드시 다른 멤버 변수가 없는 상태를 의미

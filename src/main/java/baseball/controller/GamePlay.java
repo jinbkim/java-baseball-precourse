@@ -4,6 +4,7 @@ import baseball.model.GameAnswerNumber;
 import baseball.model.GameInputNumber;
 import baseball.model.GameResult;
 import baseball.view.GameInput;
+import java.util.List;
 
 public class GamePlay {
 
@@ -13,6 +14,7 @@ public class GamePlay {
     private static final GameResult gameResult = new GameResult();
 
     public void start() {
+        gameResult.setRegame(true);
         while (gameResult.isRegame()) {
             play();
         }
@@ -20,13 +22,13 @@ public class GamePlay {
 
     private void play() {
         gameAnswerNumber.setAnswerNumberList();
-        System.out.println(gameAnswerNumber.getAnswerNumberList());
-
         while (true) {
             String input = gameInput.requestNumber();
             gameInputNumber.setInputNumberList(input);
-            gameResult.setGameResult(gameInputNumber, gameAnswerNumber);
-            System.out.println(gameResult.getGameResult() + "\n");
+            List<Integer> inputNumberList = gameInputNumber.getInputNumberList();
+            List<Integer> answerNumberList = gameAnswerNumber.getAnswerNumberList();
+            gameResult.setGameResult(inputNumberList, answerNumberList);
+            System.out.println(gameResult.getGameResult());
             if (gameResult.isGameWin()) {
                 gameResult.setRegame(gameInput.requestRegame());
                 break;

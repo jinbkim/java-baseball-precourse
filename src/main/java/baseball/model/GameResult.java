@@ -6,7 +6,8 @@ public class GameResult {
 
     private static final String STRIKE = "스트라이크";
     private static final String BALL = "볼";
-    private static final String NOTHING = "낫씽";
+    private static final String NOTHING = "낫싱";
+    private static final String GAME_OVER = "3개의 숫자를 모두 맞히셨습니다! 게임 종료";
 
     private static final long NUMBER_OF_BALLS = 3;
 
@@ -20,16 +21,16 @@ public class GameResult {
     public String getGameResult() {
         StringBuilder stringBuilder = new StringBuilder();
         if (strikeCount == 0 && ballCount == 0) {
-            return NOTHING;
+            stringBuilder.append(NOTHING);
         }
         if (ballCount > 0) {
-            stringBuilder.append(ballCount)
-                .append(BALL)
-                .append(" ");
+            stringBuilder.append(ballCount + BALL + " ");
         }
         if (strikeCount > 0) {
-            stringBuilder.append(strikeCount)
-                .append(STRIKE);
+            stringBuilder.append(strikeCount + STRIKE);
+        }
+        if (isGameWin()) {
+            stringBuilder.append("\n" + GAME_OVER);
         }
         return stringBuilder.toString();
     }
@@ -41,9 +42,7 @@ public class GameResult {
         return false;
     }
 
-    public void setGameResult(GameInputNumber gameInputNumber, GameAnswerNumber gameAnswerNumber) {
-        List<Integer> input = gameInputNumber.getInputNumberList();
-        List<Integer> answer = gameAnswerNumber.getAnswerNumberList();
+    public void setGameResult(List<Integer> input, List<Integer> answer) {
         strikeCount = input.stream()
             .filter(n -> input.indexOf(n) == answer.indexOf(n))
             .count();

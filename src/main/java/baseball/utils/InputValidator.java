@@ -7,7 +7,6 @@ public class InputValidator {
 
     private static final String NUMBER_REQUEST_REGEXP = "^[1-9]{3}$";
     private static final String REGAME_REQUEST_REGEXP = "^[1-2]{1}$";
-    private static final String BLANK_REGEXP = "";
 
     public InputValidator() {
     }
@@ -17,7 +16,7 @@ public class InputValidator {
     }
 
     private boolean isNotDuplicatedNumber(String input) {
-        return Arrays.stream(input.split(BLANK_REGEXP))
+        return Arrays.stream(input.split(""))
             .distinct()
             .count() == input.length();
     }

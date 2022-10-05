@@ -7,6 +7,7 @@ public class GameInput {
 
     private static final String REQUEST_NUMBER = "숫자를 입력해주세요 : ";
     private static final String REQUEST_REGAME = "게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.";
+    private static final String REGAME = "1";
     private static final InputValidator inputValidator = new InputValidator();
 
     public GameInput() {
@@ -28,7 +29,7 @@ public class GameInput {
         if (!inputValidator.isValidRegameRequest(input)) {
             throw new IllegalArgumentException();
         }
-        if (input.equals("1")) {
+        if (input.equals(REGAME)) {
             return true;
         }
         return false;
