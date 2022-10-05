@@ -23,8 +23,9 @@ public class GameAnswer {
         numbers = new LinkedList<>();
         while (numbers.size() < 3) {
             int number = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
-            if (numbers.contains(number))
+            if (numbers.contains(number)) {
                 continue;
+            }
             numbers.add(number);
         }
     }
