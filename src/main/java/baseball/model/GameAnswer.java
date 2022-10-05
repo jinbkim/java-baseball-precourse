@@ -1,6 +1,7 @@
 package baseball.model;
 
 import camp.nextstep.edu.missionutils.Randoms;
+import java.util.LinkedList;
 import java.util.List;
 
 public class GameAnswer {
@@ -19,7 +20,13 @@ public class GameAnswer {
     }
 
     public void setNumbers() {
-        numbers = Randoms.pickUniqueNumbersInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER, NUMBER_LENGTH);
+        numbers = new LinkedList<>();
+        while (numbers.size() < 3) {
+            int number = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
+            if (numbers.contains(number))
+                continue;
+            numbers.add(number);
+        }
     }
 
 }
