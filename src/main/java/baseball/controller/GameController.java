@@ -12,6 +12,7 @@ public class GameController {
     private InputModel inputModel = new InputModel();
     private AnswerModel answerModel = new AnswerModel();
     private ResultModel resultModel = new ResultModel();
+
     private boolean isRegame = true;
 
     public GameController() {

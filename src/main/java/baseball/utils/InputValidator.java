@@ -9,7 +9,6 @@ public class InputValidator {
     private static final String REQUEST_REGAME = "^[1-2]{1}$";
     private static final int NUMBER_LENGTH = 3;
 
-
     public InputValidator() {
     }
 

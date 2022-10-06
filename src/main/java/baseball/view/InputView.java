@@ -5,16 +5,15 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
 
-    private InputValidator inputValidator = new InputValidator();
-
     private static final String REGAME = "1";
 
+    private InputValidator inputValidator = new InputValidator();
 
     public InputView() {
     }
 
     public String requestNumber() {
-        System.out.println(OutputView.REQUEST_NUMBER);
+        System.out.print(OutputView.REQUEST_NUMBER);
         String input = Console.readLine();
         if (!inputValidator.isValidRequestNumber(input)) {
             throw new IllegalArgumentException();
