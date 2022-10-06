@@ -9,7 +9,6 @@ import baseball.view.OutputView;
 public class GameController {
 
     private InputView inputView = new InputView();
-    private OutputView outputView = new OutputView();
     private InputModel inputModel = new InputModel();
     private AnswerModel answerModel = new AnswerModel();
     private ResultModel resultModel = new ResultModel();
@@ -33,7 +32,7 @@ public class GameController {
             resultModel.setGameResult(inputModel.getNumbers(), answerModel.getNumbers());
             System.out.println(resultModel);
             if (resultModel.isGameOver()) {
-                outputView.gameOver();
+                System.out.println(OutputView.GAME_OVER);
                 isRegame = inputView.requestRegame();
                 break;
             }

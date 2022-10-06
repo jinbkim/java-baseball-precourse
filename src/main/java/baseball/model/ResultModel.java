@@ -1,12 +1,10 @@
 package baseball.model;
 
+import baseball.view.OutputView;
 import java.util.List;
 
 public class ResultModel {
 
-    private static final String STRIKE = "스트라이크";
-    private static final String BALL = "볼";
-    private static final String NOTHING = "낫싱";
     private static final int NUMBER_LENGTH = 3;
 
     private int strikeCount = 0;
@@ -19,13 +17,13 @@ public class ResultModel {
     public String toString() {
         StringBuilder stringBuilder = new StringBuilder();
         if (strikeCount == 0 && ballCount == 0) {
-            stringBuilder.append(NOTHING);
+            stringBuilder.append(OutputView.NOTHING);
         }
         if (ballCount > 0) {
-            stringBuilder.append(ballCount + BALL + " ");
+            stringBuilder.append(ballCount + OutputView.BALL + " ");
         }
         if (strikeCount > 0) {
-            stringBuilder.append(strikeCount + STRIKE);
+            stringBuilder.append(strikeCount + OutputView.STRIKE);
         }
         return stringBuilder.toString();
     }

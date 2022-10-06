@@ -5,7 +5,6 @@ import camp.nextstep.edu.missionutils.Console;
 
 public class InputView {
 
-    private OutputView outputView = new OutputView();
     private InputValidator inputValidator = new InputValidator();
 
     private static final String REGAME = "1";
@@ -15,7 +14,7 @@ public class InputView {
     }
 
     public String requestNumber() {
-        outputView.requestNumber();
+        System.out.println(OutputView.REQUEST_NUMBER);
         String input = Console.readLine();
         if (!inputValidator.isValidRequestNumber(input)) {
             throw new IllegalArgumentException();
