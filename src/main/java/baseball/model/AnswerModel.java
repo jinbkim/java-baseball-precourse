@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.Randoms;
 import java.util.LinkedList;
 import java.util.List;
 
-public class GameAnswer {
+public class AnswerModel {
 
     private static final int RANDOM_MIN_NUMBER = 1;
     private static final int RANDOM_MAX_NUMBER = 9;
@@ -12,7 +12,7 @@ public class GameAnswer {
 
     private List<Integer> numbers;
 
-    public GameAnswer() {
+    public AnswerModel() {
     }
 
     public List<Integer> getNumbers() {

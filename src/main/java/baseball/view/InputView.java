@@ -3,18 +3,18 @@ package baseball.view;
 import baseball.utils.InputValidator;
 import camp.nextstep.edu.missionutils.Console;
 
-public class GameInputString {
+public class InputView {
 
-    private static final GameOutputString gameOutputString = new GameOutputString();
+    private static final OutputView OUTPUT_VIEW = new OutputView();
     private static final InputValidator inputValidator = new InputValidator();
     private static final String REGAME = "1";
 
 
-    public GameInputString() {
+    public InputView() {
     }
 
     public String requestNumber() {
-        gameOutputString.requestNumber();
+        OUTPUT_VIEW.requestNumber();
         String input = Console.readLine();
         if (!inputValidator.isValidRequestNumber(input)) {
             throw new IllegalArgumentException();

@@ -2,7 +2,7 @@ package baseball.model;
 
 import java.util.List;
 
-public class GameResult {
+public class ResultModel {
 
     private static final String STRIKE = "스트라이크";
     private static final String BALL = "볼";
@@ -12,7 +12,7 @@ public class GameResult {
     private int strikeCount = 0;
     private int ballCount = 0;
 
-    public GameResult() {
+    public ResultModel() {
     }
 
     @Override

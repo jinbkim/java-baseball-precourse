@@ -4,11 +4,11 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class GameInput {
+public class InputModel {
 
     private List<Integer> numbers;
 
-    public GameInput() {
+    public InputModel() {
     }
 
     public List<Integer> getNumbers() {

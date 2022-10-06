@@ -1,11 +1,11 @@
 package baseball;
 
-import baseball.controller.GameMachine;
+import baseball.controller.GameController;
 
 public class Application {
 
     public static void main(String[] args) {
-        GameMachine gameMachine = new GameMachine();
-        gameMachine.run();
+        GameController gameController = new GameController();
+        gameController.run();
     }
 }
