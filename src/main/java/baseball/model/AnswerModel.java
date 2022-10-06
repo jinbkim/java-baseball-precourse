@@ -21,7 +21,7 @@ public class AnswerModel {
 
     public void setNumbers() {
         numbers = new LinkedList<>();
-        while (numbers.size() < 3) {
+        while (numbers.size() < NUMBER_LENGTH) {
             int number = Randoms.pickNumberInRange(RANDOM_MIN_NUMBER, RANDOM_MAX_NUMBER);
             if (numbers.contains(number)) {
                 continue;

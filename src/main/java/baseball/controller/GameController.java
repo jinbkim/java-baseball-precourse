@@ -8,11 +8,11 @@ import baseball.view.OutputView;
 
 public class GameController {
 
-    private static final InputView inputView = new InputView();
-    private static final OutputView outputView = new OutputView();
-    private static final InputModel inputModel = new InputModel();
-    private static final AnswerModel answerModel = new AnswerModel();
-    private static final ResultModel resultModel = new ResultModel();
+    private InputView inputView = new InputView();
+    private OutputView outputView = new OutputView();
+    private InputModel inputModel = new InputModel();
+    private AnswerModel answerModel = new AnswerModel();
+    private ResultModel resultModel = new ResultModel();
     private boolean isRegame = true;
 
     public GameController() {
