@@ -18,7 +18,7 @@ public class PlayerNumber {
             .collect(Collectors.toList());
     }
 
-    public boolean isExist(int number) {
-        return numbers.contains(number);
+    public List<Integer> getNumbersForTest() {
+        return numbers;
     }
 }
