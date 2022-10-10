@@ -5,6 +5,8 @@ import java.util.List;
 
 public class GameResult {
 
+    private static final int ALL_BALLS = 3;
+
     private int strike = 0;
     private int ball = 0;
 
@@ -42,6 +44,6 @@ public class GameResult {
     }
 
     public boolean isGameWin() {
-        return strike == 3;
+        return strike == ALL_BALLS;
     }
 }
