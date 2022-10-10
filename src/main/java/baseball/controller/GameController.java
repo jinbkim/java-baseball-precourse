@@ -7,18 +7,29 @@ import baseball.view.InputView;
 
 public class GameController {
 
+    private static final String REGAME = "1";
+
     private final InputView inputView = new InputView();
-    private boolean isRegame = true;
 
     public void run() {
+        boolean isRegame = true;
+
         while (isRegame) {
-            AnswerNumber answerNumber = new AnswerNumber();
+            gameStart();
+            isRegame = inputView.requestRegame()
+                .equals(REGAME);
+        }
+    }
+
+    public void gameStart() {
+        AnswerNumber answerNumber = new AnswerNumber();
+        boolean isGameWin = false;
+
+        while (!isGameWin) {
             String stringNumber = inputView.requestNumber();
             PlayerNumber playerNumber = new PlayerNumber(stringNumber);
             GameResult gameResult = new GameResult(answerNumber.getNumbers(), playerNumber.getNumbers());
-
-            inputView.requestRegame();
-            break;
+            isGameWin = gameResult.isGameWin();
         }
     }
 }
