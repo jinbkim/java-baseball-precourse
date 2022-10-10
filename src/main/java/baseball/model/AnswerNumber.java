@@ -23,7 +23,7 @@ public class AnswerNumber {
         }
     }
 
-    public List<Integer> getNumbersForTest() {
+    public List<Integer> getNumbers() {
         return numbers;
     }
 }

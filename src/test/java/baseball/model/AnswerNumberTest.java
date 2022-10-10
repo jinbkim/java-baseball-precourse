@@ -9,7 +9,7 @@ class AnswerNumberTest {
     void 중복없는_정답_숫자_생성() {
         AnswerNumber answerNumber = new AnswerNumber();
 
-        Assertions.assertThat(answerNumber.getNumbersForTest()
+        Assertions.assertThat(answerNumber.getNumbers()
                 .stream()
                 .distinct()
                 .count())

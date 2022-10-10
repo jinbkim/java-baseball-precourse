@@ -18,7 +18,7 @@ public class PlayerNumber {
             .collect(Collectors.toList());
     }
 
-    public List<Integer> getNumbersForTest() {
+    public List<Integer> getNumbers() {
         return numbers;
     }
 }
