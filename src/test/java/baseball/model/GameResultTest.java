@@ -1,6 +1,7 @@
 package baseball.model;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
@@ -8,14 +9,11 @@ import org.junit.jupiter.api.Test;
 
 class GameResultTest {
 
-    static List<Integer> answerNumber;
+    private static List<Integer> answerNumber;
 
     @BeforeAll()
     static void init() {
-        answerNumber = new ArrayList<>();
-        answerNumber.add(1);
-        answerNumber.add(2);
-        answerNumber.add(3);
+        answerNumber = Arrays.asList(1, 2, 3);
     }
 
     @Test

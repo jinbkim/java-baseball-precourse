@@ -5,8 +5,7 @@ import org.junit.jupiter.api.Test;
 
 class InputValidatorTest {
 
-    InputValidator inputValidator = new InputValidator();
-
+    private final InputValidator inputValidator = new InputValidator();
 
     @Test
     void 숫자_야구_정상적인_입력_받기() {
