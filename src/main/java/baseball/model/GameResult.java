@@ -1,5 +1,6 @@
 package baseball.model;
 
+import baseball.view.OutputView;
 import java.util.List;
 
 public class GameResult {
@@ -24,5 +25,27 @@ public class GameResult {
 
     public int getBall() {
         return ball;
+    }
+
+    public void printGameResult() {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        if (ball > 0) {
+            stringBuilder.append(ball + OutputView.BALL + " ");
+        }
+        if (strike > 0) {
+            stringBuilder.append(strike + OutputView.STRIKE);
+        }
+        if (isGameWin()) {
+            stringBuilder.append("\n" + OutputView.GAME_WIN);
+        }
+        if (ball == 0 && strike == 0) {
+            stringBuilder.append(OutputView.NOTHING);
+        }
+        System.out.println(stringBuilder);
+    }
+
+    public boolean isGameWin() {
+        return strike == 3;
     }
 }
