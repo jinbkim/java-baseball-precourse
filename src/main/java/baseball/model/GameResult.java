@@ -9,14 +9,12 @@ public class GameResult {
     private int ball = 0;
 
     public GameResult(List<Integer> answerNumber, List<Integer> playerNumber) {
-        for (int i = 0; i < playerNumber.size(); i++) {
-            if (answerNumber.indexOf(playerNumber.get(i)) == i) {
-                strike += 1;
-            }
-            else if (answerNumber.contains(playerNumber.get(i))) {
-                ball += 1;
-            }
-        }
+        strike = (int) playerNumber.stream()
+            .filter(n -> playerNumber.indexOf(n) == answerNumber.indexOf(n))
+            .count();
+        ball = (int) playerNumber.stream()
+            .filter(n -> answerNumber.contains(n) && playerNumber.indexOf(n) != answerNumber.indexOf(n))
+            .count();
         printGameResult();
     }
 
