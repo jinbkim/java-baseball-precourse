@@ -17,14 +17,14 @@
 
 ## 프로그래밍 요구사항
 
-- [ ] 자바 8 버전 확인
-- [ ] ./gradlew clean test로 모든 테스트가 통과하는지 확인
-- [ ] 자바 코드 컨벤션 지키기
-- [ ] 들여쓰기는 최대 2
-- [ ] 3항 연산자 쓰지 않기
-- [ ] 함수는 한가지 일만 하도록 최대한 작게 구현
-- [ ] camp.nextstep.edu.missionutils API 사용
-    - [ ] Randoms.pickNumberInRange()을 사용하여 랜덤값 추출
-    - [ ] Console.readLine()을 사용하여 입력 받기
-- [ ] 구현할 기능 목록 정리
-- [ ] 커밋 컨벤션 지키기
+- [x] 자바 8 버전 확인
+- [x] ./gradlew clean test로 모든 테스트가 통과하는지 확인
+- [x] 자바 코드 컨벤션 지키기
+- [x] 들여쓰기는 최대 2
+- [x] 3항 연산자 쓰지 않기
+- [x] 함수는 한가지 일만 하도록 최대한 작게 구현
+- [x] camp.nextstep.edu.missionutils API 사용
+    - [x] Randoms.pickNumberInRange()을 사용하여 랜덤값 추출
+    - [x] Console.readLine()을 사용하여 입력 받기
+- [x] 구현할 기능 목록 정리
+- [x] 커밋 컨벤션 지키기
