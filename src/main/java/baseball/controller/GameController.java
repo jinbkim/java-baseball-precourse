@@ -8,14 +8,16 @@ import baseball.view.InputView;
 public class GameController {
 
     private final InputView inputView = new InputView();
+    private boolean isRegame = true;
 
     public void run() {
-        while (true) {
+        while (isRegame) {
             AnswerNumber answerNumber = new AnswerNumber();
             String stringNumber = inputView.requestNumber();
             PlayerNumber playerNumber = new PlayerNumber(stringNumber);
             GameResult gameResult = new GameResult(answerNumber.getNumbers(), playerNumber.getNumbers());
-            gameResult.printGameResult();
+
+            inputView.requestRegame();
             break;
         }
     }

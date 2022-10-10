@@ -17,6 +17,7 @@ public class GameResult {
                 ball += 1;
             }
         }
+        printGameResult();
     }
 
     public int getStrike() {
@@ -35,9 +36,6 @@ public class GameResult {
         }
         if (strike > 0) {
             stringBuilder.append(strike + OutputView.STRIKE);
-        }
-        if (isGameWin()) {
-            stringBuilder.append("\n" + OutputView.GAME_WIN);
         }
         if (ball == 0 && strike == 0) {
             stringBuilder.append(OutputView.NOTHING);
